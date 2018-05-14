@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.ArrayList;
 import java.util.List;
 
-// json -----------------controller
+// json 的练习test 1/2/3  与项目无关连 -----------------controller
 @Controller
 @RequestMapping("")
 public class JsonController {
