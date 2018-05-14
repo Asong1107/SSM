@@ -10,7 +10,6 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 
-
 <html>
 <head>
     <title>Title</title>
@@ -31,7 +30,6 @@
 <!--显示数据库所有信息-->
 <table align="center" border="1px" cellspacing="0">
     <caption class="ca">当前显示数据库所有数据</caption>
-
 <tr>
     <td>id</td>
     <td>name</td>
@@ -73,13 +71,27 @@
          <fmt:formatDate value="${c.updated_at}"  pattern="yyyy-MM-dd HH:mm:ss" type="both"/>
      </td>
         <td><a href="/chen?id=${c.id}">编辑</a></td>
-
-        <td><a href="/song?id=${c.id}" class="cha">删除</a></td>
+<!--js删除-->
+        <td><a href="" class="cha" onclick="butt(${c.id})">删除</a></td>
     </tr>
 </c:forEach>
 
 </table>
 
+<!--用ajax 来传递delete方法。。-->
+<script>
+    function butt(id){
+        $.ajax({
+            type:"DELETE",
+            url:"/song?id="+id,
+            success: function(){
+                alert("删除成功");
+            }
+
+        });
+    }
+
+</script>
 
 
 
