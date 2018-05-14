@@ -63,9 +63,9 @@ public ModelAndView update(User user){
 }
 
 //删除数据
-    @RequestMapping(value = "song",method = RequestMethod.GET)
-    public ModelAndView delete(User user){
-        userService.deleteUserId(user.getId());
+    @RequestMapping(value = "song",method = RequestMethod.DELETE)
+    public ModelAndView delete(int id){
+        userService.deleteUserId(id);
         return new ModelAndView("redirect:/list");
     }
 
