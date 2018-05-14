@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<!-- 用ajax 提交表单 json 到数据库 -->
+<!-- 扩展-----用ajax 提交表单 json 到数据库 -->
 <form id="fm" name="from" method="post">
 
 
